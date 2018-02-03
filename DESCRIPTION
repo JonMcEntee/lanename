@@ -1,0 +1,17 @@
+Package: lanename
+Type: Package
+Title: Tools for converting KMA codes to real world names
+Version: 0.0.0.9000
+Authors@R: person("Jonathan", "McEntee", email = "jon.mcentee@dat.com",
+  role = c("aut", "cre"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: This package provides a set of one-to-one, one-to-many, and
+    many-to-many functions, which convert KMA codes to human readable names,
+    or convert a KMA to a list of 3 digit zips, etc.
+Depends: R (>= 3.4.3)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: 
+    testthat

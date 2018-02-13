@@ -9,6 +9,7 @@
 #' @param list2 A list of items to be converted two. Both \code{list1} and \code{list2} must
 #'   be of the same length as \code{list1}.
 #' @return A function which can convert objects in \code{list1} to objects in \code{list2}.
+#' @export
 convert <- function(list1, list2) {
   n <- length(list1)
   m <- length(list2)
@@ -18,3 +19,30 @@ convert <- function(list1, list2) {
     list2[which(list1 == x)]
   }
 }
+
+data("market_areas")
+
+#' Converts KMA codes into human readable form
+#'
+#' For example, converts "TX_DAL" to "Dallas, TX"
+#'
+#' @param x a KMA code in string format to be converted
+#' @return a human readable city name
+#' @export
+kma_to_readable <- convert(market_areas$kma, market_areas$full_name)
+
+# functions to assist in parsing data from DS_CSB_CALC_MARKET_RATES
+
+#' Convert EQUIPMENT_CATEGORY string into human readable format
+#'
+#' @param x an equipment type string ('V', 'F', or 'R')
+#' @return a human readable string representing that equipment type
+#' @export
+readable_equip <- convert(c('V','F','R'), c('Van', 'Flatbed', 'Reefer'))
+
+#' Convert RATE_TYPE string into human readable format
+#'
+#' @param x a rate type in integer format (1 or 2)
+#' @return a human readable string representing that rate type
+#' @export
+readable_rate_type <- convert(c(1L, 2L), c('Contract', 'Spot'))

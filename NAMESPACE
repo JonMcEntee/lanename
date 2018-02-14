@@ -3,5 +3,5 @@
 export(convert)
 export(kma_to_readable)
 export(readable_equip)
+export(readable_lane)
 export(readable_rate_type)
-export(readable_use_case)

@@ -1,12 +1,12 @@
-#' Produces a string that describes the use case of a time series
+#' Produces a string that describes the a lane
 #'
 #' @param days_back the days_back parameter of the lane
 #' @param rate_type the rate_type parameter of the lane
 #' @param equip_type the equipment_category of the lane
 #' @return a string that describes the use case in human readable language
 #' @export
-readable_use_case <- function(days_back = NULL, rate_type = NULL, equip_type = NULL) {
-  if (is.null(days_back) && is.null(rate_type) && is.null(equip_type)) {
+readable_lane <- function(days_back, rate_type, equip_type = NULL) {
+  if (is.na(days_back) && is.na(rate_type) && is.na(equip_type)) {
     stop('one of the parameters: days_back, rate_type, or equip_type must be defined')
   }
 
@@ -16,3 +16,4 @@ readable_use_case <- function(days_back = NULL, rate_type = NULL, equip_type = N
 
   return(paste(c(days, type, "Rates", equip), collapse = ' '))
 }
+

@@ -31,6 +31,15 @@ data("market_areas")
 #' @export
 kma_to_readable <- convert(market_areas$kma, market_areas$full_name)
 
+#' Takes in a KMA code and returns the parent region of that KMA
+#'
+#' For example, 'TX_DAL' becomes "South Central"
+#'
+#' @param x a KMA code in string format to be converted
+#' @return the KMA code's parent region
+#' @export
+find_kma_parent <- convert(market_areas$kma, market_areas$parent)
+
 # functions to assist in parsing data from DS_CSB_CALC_MARKET_RATES
 
 #' Convert EQUIPMENT_CATEGORY string into human readable format

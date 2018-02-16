@@ -40,6 +40,15 @@ kma_to_readable <- convert(market_areas$kma, market_areas$full_name)
 #' @export
 find_kma_parent <- convert(market_areas$kma, market_areas$parent)
 
+#' Takes in a Region and returns a string vector of child KMAs
+#'
+#' For example, "California" returns "CA_FRS" "CA_LAX" "CA_ONT" "CA_SDI" "CA_SFR" "CA_STK" "OR_MED"
+#'
+#' @param x a Region in string format to be converted
+#' @return a list of KMA codes in string format
+#' @export
+find_region_children <- convert(regions$region, regions$children_kmas)
+
 # functions to assist in parsing data from DS_CSB_CALC_MARKET_RATES
 
 #' Convert EQUIPMENT_CATEGORY string into human readable format

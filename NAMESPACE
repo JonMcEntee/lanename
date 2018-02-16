@@ -2,6 +2,7 @@
 
 export(convert)
 export(find_kma_parent)
+export(find_region_children)
 export(kma_to_readable)
 export(readable_equip)
 export(readable_lane)

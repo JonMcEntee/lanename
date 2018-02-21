@@ -21,6 +21,7 @@ convert <- function(list1, list2) {
 }
 
 data("market_areas")
+data("regions")
 
 #' Converts KMA codes into human readable form
 #'

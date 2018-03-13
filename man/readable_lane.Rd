@@ -4,7 +4,8 @@
 \alias{readable_lane}
 \title{Produces a string that describes the a lane}
 \usage{
-readable_lane(days_back, rate_type, equip_type = NULL)
+readable_lane(days_back, rate_type, equip_type = NULL, h = NULL,
+  density = NULL)
 }
 \arguments{
 \item{days_back}{the days_back parameter of the lane}
@@ -12,6 +13,10 @@ readable_lane(days_back, rate_type, equip_type = NULL)
 \item{rate_type}{the rate_type parameter of the lane}
 
 \item{equip_type}{the equipment_category of the lane}
+
+\item{h}{the number of time units forecasted out}
+
+\item{density}{the time unit of the forecast (for example 'day' or 'week')}
 }
 \value{
 a string that describes the use case in human readable language
